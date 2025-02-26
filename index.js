@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 
 // GET route to return JSON response
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   const response = {
     email: 'kazibweusama@gmail.com', 
     current_datetime: new Date().toISOString(),
@@ -20,5 +20,5 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+//   console.log(`Server running at http://localhost:${port}`);
 });
